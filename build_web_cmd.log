@@ -1,0 +1,44 @@
+
+> web@0.1.0 build C:\clubhub\apps\web
+> next build
+
+▲ Next.js 16.2.0 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+Error: Could not resolve value for theme function: `theme(colors.glass)`. Consider checking if the path is correct or provide a fallback value to silence this error.
+    [2m[at Object.To [as theme] (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:13:5816)][0m
+    [2m[at C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:13:6497][0m
+    [2m[at _r (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:3:1733)][0m
+    [2m[at I (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:3:1377)][0m
+    [2m[at ii (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:13:6389)][0m
+    [2m[at C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:13:6161][0m
+    [2m[at _r (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:3:1733)][0m
+    [2m[at I (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:3:1377)][0m
+    [2m[at Fe (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:13:6086)][0m
+    [2m[at mn (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:38:283)][0m
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./apps/web/app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\clubhub\apps\web\app\globals.css:1:1: Could not resolve value for theme function: `theme(colors.glass)`. Consider checking if the path is correct or provide a fallback value to silence this error.
+    at Input.error (node_modules/.pnpm/postcss@8.4.31/node_modules/postcss/lib/input.js:106:16) [C:\clubhub\apps\web\.next\build\chunks\node_modules__pnpm_0e-dfa2._.js:4132:22]
+    at error (node_modules/.pnpm/postcss@8.4.31/node_modules/postcss/lib/node.js:115:32) [C:\clubhub\apps\web\.next\build\chunks\node_modules__pnpm_0e-dfa2._.js:895:38]
+    [at Object.Once (C:\clubhub\node_modules\.pnpm\@tailwindcss+postcss@4.2.2\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+    at async LazyResult.runAsync (node_modules/.pnpm/postcss@8.4.31/node_modules/postcss/lib/lazy-result.js:261:11) [C:\clubhub\apps\web\.next\build\chunks\node_modules__pnpm_0e-dfa2._.js:6052:21]
+    at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34) [C:\clubhub\apps\web\.next\build\chunks\[root-of-the-server]__0cstldc._.js:146:36]
+    at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23) [C:\clubhub\apps\web\.next\build\chunks\[root-of-the-server]__0s3ts0r._.js:443:31]
+
+Import trace:
+  Client Component Browser:
+    ./apps/web/app/globals.css [Client Component Browser]
+    ./apps/web/app/layout.tsx [Server Component]
+
+
+    at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34) [C:\clubhub\apps\web\.next\build\chunks\[root-of-the-server]__0cstldc._.js:146:36])
+    at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23) [C:\clubhub\apps\web\.next\build\chunks\[root-of-the-server]__0s3ts0r._.js:443:31])
+C:\clubhub\apps\web:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  web@0.1.0 build: `next build`
+Exit status 1

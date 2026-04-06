@@ -1,0 +1,71 @@
+
+> clubhub@ build C:\clubhub
+> turbo run build
+
+
+   • Packages in scope: @repo/eslint-config, @repo/lib, @repo/typescript-config, @repo/ui, admin, docs, web
+   • Running build in 7 packages
+   • Remote caching disabled
+
+admin:build: cache miss, executing 4fedf506756470ab
+web:build: cache miss, executing 84b142c063e20c4c
+docs:build: cache miss, executing f4afacfd7233fe45
+web:build: 
+web:build: > web@0.1.0 build C:\clubhub\apps\web
+web:build: > next build
+web:build: 
+admin:build: 
+admin:build: > admin@0.1.0 build C:\clubhub\apps\admin
+admin:build: > next build
+admin:build: 
+docs:build: 
+docs:build: > docs@0.1.0 build C:\clubhub\apps\docs
+docs:build: > next build
+docs:build: 
+docs:build: ▲ Next.js 16.2.0 (Turbopack)
+docs:build: 
+admin:build: ▲ Next.js 16.2.2 (Turbopack)
+web:build: ▲ Next.js 16.2.0 (Turbopack)
+admin:build: - Environments: .env.local
+web:build: - Environments: .env.local
+admin:build: 
+web:build: 
+docs:build:   Creating an optimized production build ...
+web:build:   Creating an optimized production build ...
+admin:build:   Creating an optimized production build ...
+docs:build: ✓ Compiled successfully in 3.2s
+docs:build:   Running TypeScript ...
+admin:build: ✓ Compiled successfully in 3.8s
+admin:build:   Running TypeScript ...
+web:build: ✓ Compiled successfully in 4.9s
+web:build:   Running TypeScript ...
+docs:build:   Finished TypeScript in 3.1s ...
+docs:build:   Collecting page data using 5 workers ...
+docs:build:   Generating static pages using 5 workers (0/4) ...
+admin:build: Failed to type check.
+admin:build: 
+admin:build: .next/types/validator.ts:143:39
+admin:build: Type error: File 'C:/clubhub/apps/admin/app/api/events/update/route.ts' is not a module.
+admin:build: 
+admin:build:   [90m141 |[0m {
+admin:build:   [90m142 |[0m   [36mtype[0m __IsExpected<[33mSpecific[0m [36mextends[0m [33mRouteHandlerConfig[0m<[32m"/api/events/update"[0m>> = [33mSpecific[0m
+admin:build: [31m[1m>[0m [90m143 |[0m   [36mconst[0m handler = {} [36mas[0m [36mtypeof[0m [36mimport[0m([32m"../../app/api/events/update/route.js"[0m)
+admin:build:   [90m    |[0m                                       [31m[1m^[0m
+admin:build:   [90m144 |[0m   [36mtype[0m __Check = __IsExpected<[36mtypeof[0m handler>
+admin:build:   [90m145 |[0m   [90m// @ts-ignore[0m
+admin:build:   [90m146 |[0m   [36mtype[0m __Unused = __Check
+admin:build: Next.js build worker exited with code: 1 and signal: null
+admin:build:  ELIFECYCLE  Command failed with exit code 1.
+docs:build:   Generating static pages using 5 workers (1/4) 
+docs:build:   Generating static pages using 5 workers (2/4) 
+docs:build:   Generating static pages using 5 workers (3/4) 
+docs:build: ✓ Generating static pages using 5 workers (4/4) in 637ms
+ ERROR  admin#build: command (C:\clubhub\apps\admin) C:\Users\krish\AppData\Local\pnpm\.tools\pnpm\9.0.0\bin\pnpm.CMD run build exited (1)
+
+ Tasks:    0 successful, 3 total
+Cached:    0 cached, 3 total
+  Time:    9.6s 
+Failed:    admin#build
+
+ ERROR  run failed: command  exited (1)
+ ELIFECYCLE  Command failed with exit code 1.

@@ -1,0 +1,97 @@
+
+> clubhub@ build C:\clubhub
+> turbo run build
+
+
+   • Packages in scope: @repo/eslint-config, @repo/lib, @repo/typescript-config, @repo/ui, admin, docs, web
+   • Running build in 7 packages
+   • Remote caching disabled
+
+docs:build: cache miss, executing 6c37f848bf8d4924
+web:build: cache miss, executing 77c3ab75d2e36124
+admin:build: cache miss, executing c20579b660e4e1ff
+web:build: 
+web:build: > web@0.1.0 build C:\clubhub\apps\web
+web:build: > next build
+web:build: 
+docs:build: 
+docs:build: > docs@0.1.0 build C:\clubhub\apps\docs
+docs:build: > next build
+docs:build: 
+admin:build: 
+admin:build: > admin@0.1.0 build C:\clubhub\apps\admin
+admin:build: > next build
+admin:build: 
+docs:build: Attention: Next.js now collects completely anonymous telemetry regarding usage.
+docs:build: This information is used to shape Next.js' roadmap and prioritize features.
+docs:build: You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+docs:build: https://nextjs.org/telemetry
+docs:build: 
+web:build: Attention: Next.js now collects completely anonymous telemetry regarding usage.
+web:build: This information is used to shape Next.js' roadmap and prioritize features.
+web:build: You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+web:build: https://nextjs.org/telemetry
+web:build: 
+admin:build: Attention: Next.js now collects completely anonymous telemetry regarding usage.
+admin:build: This information is used to shape Next.js' roadmap and prioritize features.
+admin:build: You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+admin:build: https://nextjs.org/telemetry
+admin:build: 
+admin:build: ▲ Next.js 16.2.2 (Turbopack)
+admin:build: - Environments: .env.local
+admin:build: 
+docs:build: ▲ Next.js 16.2.0 (Turbopack)
+docs:build: 
+web:build: ▲ Next.js 16.2.0 (Turbopack)
+web:build: - Environments: .env.local
+web:build: 
+admin:build:   Creating an optimized production build ...
+docs:build:   Creating an optimized production build ...
+web:build:   Creating an optimized production build ...
+web:build: Error: Cannot apply unknown utility class `rounded-2xl`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+web:build:     [2m[at onInvalidCandidate (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:21:1314)][0m
+web:build:     [2m[at Ee (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:16:37066)][0m
+web:build:     [2m[at C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:21:355][0m
+web:build:     [2m[at _r (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:3:1733)][0m
+web:build:     [2m[at I (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:3:1377)][0m
+web:build:     [2m[at Te (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:21:172)][0m
+web:build:     [2m[at mn (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:38:294)][0m
+web:build:     [2m[at process.processTicksAndRejections (node:internal/process/task_queues:105:5)][0m
+web:build:     [2m[at async gn (C:\clubhub\node_modules\.pnpm\tailwindcss@4.2.2\node_modules\tailwindcss\dist\lib.js:38:631)][0m
+web:build:     [2m[at async Xr (C:\clubhub\node_modules\.pnpm\@tailwindcss+node@4.2.2\node_modules\@tailwindcss\node\dist\index.js:10:3416)][0m
+docs:build: ✓ Compiled successfully in 3.0s
+docs:build:   Running TypeScript ...
+admin:build: ✓ Compiled successfully in 4.1s
+admin:build:   Running TypeScript ...
+web:build: 
+web:build: > Build error occurred
+web:build: Error: Turbopack build failed with 1 errors:
+web:build: ./apps/web/app/globals.css
+web:build: Error evaluating Node.js code
+web:build: CssSyntaxError: tailwindcss: C:\clubhub\apps\web\app\globals.css:1:1: Cannot apply unknown utility class `rounded-2xl`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+web:build:     at Input.error (node_modules/.pnpm/postcss@8.4.31/node_modules/postcss/lib/input.js:106:16) [C:\clubhub\apps\web\.next\build\chunks\node_modules__pnpm_0e-dfa2._.js:4132:22]
+web:build:     at error (node_modules/.pnpm/postcss@8.4.31/node_modules/postcss/lib/node.js:115:32) [C:\clubhub\apps\web\.next\build\chunks\node_modules__pnpm_0e-dfa2._.js:895:38]
+web:build:     [at Object.Once (C:\clubhub\node_modules\.pnpm\@tailwindcss+postcss@4.2.2\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+web:build:     [at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+web:build:     at async LazyResult.runAsync (node_modules/.pnpm/postcss@8.4.31/node_modules/postcss/lib/lazy-result.js:261:11) [C:\clubhub\apps\web\.next\build\chunks\node_modules__pnpm_0e-dfa2._.js:6052:21]
+web:build:     at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34) [C:\clubhub\apps\web\.next\build\chunks\[root-of-the-server]__0cstldc._.js:146:36]
+web:build:     at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23) [C:\clubhub\apps\web\.next\build\chunks\[root-of-the-server]__0s3ts0r._.js:443:31]
+web:build: 
+web:build: Import trace:
+web:build:   Client Component Browser:
+web:build:     ./apps/web/app/globals.css [Client Component Browser]
+web:build:     ./apps/web/app/layout.tsx [Server Component]
+web:build: 
+web:build: 
+web:build:     at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34) [C:\clubhub\apps\web\.next\build\chunks\[root-of-the-server]__0cstldc._.js:146:36])
+web:build:     at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23) [C:\clubhub\apps\web\.next\build\chunks\[root-of-the-server]__0s3ts0r._.js:443:31])
+web:build:  ELIFECYCLE  Command failed with exit code 1.
+ ERROR  web#build: command (C:\clubhub\apps\web) C:\Users\krish\AppData\Local\pnpm\.tools\pnpm\9.0.0\bin\pnpm.CMD run build exited (1)
+
+ Tasks:    0 successful, 3 total
+Cached:    0 cached, 3 total
+  Time:    7.028s 
+Failed:    web#build
+
+ ERROR  run failed: command  exited (1)
+ ELIFECYCLE  Command failed with exit code 1.

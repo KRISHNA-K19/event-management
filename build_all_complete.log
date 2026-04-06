@@ -1,0 +1,90 @@
+
+> clubhub@ build C:\clubhub
+> turbo run build
+
+
+   • Packages in scope: @repo/eslint-config, @repo/lib, @repo/typescript-config, @repo/ui, admin, docs, web
+   • Running build in 7 packages
+   • Remote caching disabled
+
+docs:build: cache miss, executing f4afacfd7233fe45
+admin:build: cache miss, executing e7787d481403dff5
+web:build: cache miss, executing 84b142c063e20c4c
+admin:build: 
+admin:build: > admin@0.1.0 build C:\clubhub\apps\admin
+admin:build: > next build
+admin:build: 
+docs:build: 
+docs:build: > docs@0.1.0 build C:\clubhub\apps\docs
+docs:build: > next build
+docs:build: 
+web:build: 
+web:build: > web@0.1.0 build C:\clubhub\apps\web
+web:build: > next build
+web:build: 
+docs:build: ▲ Next.js 16.2.0 (Turbopack)
+docs:build: 
+admin:build: ▲ Next.js 16.2.2 (Turbopack)
+admin:build: - Environments: .env.local
+admin:build: 
+web:build: ▲ Next.js 16.2.0 (Turbopack)
+web:build: - Environments: .env.local
+web:build: 
+docs:build:   Creating an optimized production build ...
+admin:build:   Creating an optimized production build ...
+web:build:   Creating an optimized production build ...
+docs:build: ✓ Compiled successfully in 3.1s
+docs:build:   Running TypeScript ...
+admin:build: ✓ Compiled successfully in 4.8s
+admin:build:   Running TypeScript ...
+web:build: ✓ Compiled successfully in 5.2s
+web:build:   Running TypeScript ...
+docs:build:   Finished TypeScript in 3.1s ...
+docs:build:   Collecting page data using 5 workers ...
+docs:build:   Generating static pages using 5 workers (0/4) ...
+docs:build:   Generating static pages using 5 workers (1/4) 
+docs:build:   Generating static pages using 5 workers (2/4) 
+docs:build:   Generating static pages using 5 workers (3/4) 
+docs:build: ✓ Generating static pages using 5 workers (4/4) in 637ms
+docs:build:   Finalizing page optimization ...
+docs:build: 
+docs:build: Route (app)
+docs:build: ┌ ○ /
+docs:build: └ ○ /_not-found
+docs:build: 
+docs:build: 
+docs:build: ○  (Static)  prerendered as static content
+docs:build: 
+web:build: Failed to type check.
+web:build: 
+web:build: ../../packages/lib/tailwind.config.ts:1:23
+web:build: Type error: Cannot find type definition file for 'tailwindcss/types/config'.
+web:build: 
+web:build: [31m[1m>[0m [90m1 |[0m [90m/// <reference types="tailwindcss/types/config" />\nimport type { Config } from 'tailwindcs...[0m
+web:build:   [90m  |[0m                       [31m[1m^[0m
+web:build:   [90m2 |[0m
+web:build:   [90m3 |[0m [36mconst[0m config: [33mConfig[0m = {
+web:build:   [90m4 |[0m   content: [],
+admin:build: Failed to type check.
+admin:build: 
+admin:build: ../../packages/lib/tailwind.config.ts:1:23
+admin:build: Type error: Cannot find type definition file for 'tailwindcss/types/config'.
+admin:build: 
+admin:build: [31m[1m>[0m [90m1 |[0m [90m/// <reference types="tailwindcss/types/config" />\nimport type { Config } from 'tailwindcs...[0m
+admin:build:   [90m  |[0m                       [31m[1m^[0m
+admin:build:   [90m2 |[0m
+admin:build:   [90m3 |[0m [36mconst[0m config: [33mConfig[0m = {
+admin:build:   [90m4 |[0m   content: [],
+web:build: Next.js build worker exited with code: 1 and signal: null
+admin:build: Next.js build worker exited with code: 1 and signal: null
+web:build:  ELIFECYCLE  Command failed with exit code 1.
+admin:build:  ELIFECYCLE  Command failed with exit code 1.
+ ERROR  web#build: command (C:\clubhub\apps\web) C:\Users\krish\AppData\Local\pnpm\.tools\pnpm\9.0.0\bin\pnpm.CMD run build exited (1)
+
+ Tasks:    0 successful, 3 total
+Cached:    0 cached, 3 total
+  Time:    10.161s 
+Failed:    web#build
+
+ ERROR  run failed: command  exited (1)
+ ELIFECYCLE  Command failed with exit code 1.

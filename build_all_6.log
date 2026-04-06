@@ -1,0 +1,113 @@
+
+> clubhub@ build C:\clubhub
+> turbo run build
+
+
+   • Packages in scope: @repo/eslint-config, @repo/lib, @repo/typescript-config, @repo/ui, admin, docs, web
+   • Running build in 7 packages
+   • Remote caching disabled
+
+docs:build: cache miss, executing f4afacfd7233fe45
+admin:build: cache miss, executing 96cb243001190b7d
+web:build: cache miss, executing beea7f85bf859c87
+web:build: 
+web:build: > web@0.1.0 build C:\clubhub\apps\web
+web:build: > next build
+web:build: 
+docs:build: 
+docs:build: > docs@0.1.0 build C:\clubhub\apps\docs
+docs:build: > next build
+docs:build: 
+admin:build: 
+admin:build: > admin@0.1.0 build C:\clubhub\apps\admin
+admin:build: > next build
+admin:build: 
+docs:build: ▲ Next.js 16.2.0 (Turbopack)
+web:build: ▲ Next.js 16.2.0 (Turbopack)
+web:build: - Environments: .env.local
+docs:build: 
+web:build: 
+web:build:   Creating an optimized production build ...
+docs:build:   Creating an optimized production build ...
+admin:build: ▲ Next.js 16.2.2 (Turbopack)
+admin:build: - Environments: .env.local
+admin:build: 
+admin:build:   Creating an optimized production build ...
+docs:build: ✓ Compiled successfully in 3.0s
+docs:build:   Running TypeScript ...
+admin:build: ✓ Compiled successfully in 4.3s
+admin:build:   Running TypeScript ...
+web:build: ✓ Compiled successfully in 4.8s
+web:build:   Running TypeScript ...
+docs:build:   Finished TypeScript in 4.0s ...
+docs:build:   Collecting page data using 5 workers ...
+docs:build:   Generating static pages using 5 workers (0/4) ...
+docs:build:   Generating static pages using 5 workers (1/4) 
+docs:build:   Generating static pages using 5 workers (2/4) 
+docs:build:   Generating static pages using 5 workers (3/4) 
+docs:build: ✓ Generating static pages using 5 workers (4/4) in 827ms
+docs:build:   Finalizing page optimization ...
+docs:build: 
+docs:build: Route (app)
+docs:build: ┌ ○ /
+docs:build: └ ○ /_not-found
+docs:build: 
+docs:build: 
+docs:build: ○  (Static)  prerendered as static content
+docs:build: 
+admin:build:   Finished TypeScript in 4.3s ...
+web:build:   Finished TypeScript in 3.9s ...
+admin:build:   Collecting page data using 11 workers ...
+web:build:   Collecting page data using 11 workers ...
+web:build:   Generating static pages using 11 workers (0/9) ...
+admin:build:   Generating static pages using 11 workers (0/13) ...
+admin:build:   Generating static pages using 11 workers (3/13) 
+admin:build:   Generating static pages using 11 workers (6/13) 
+admin:build:   Generating static pages using 11 workers (9/13) 
+admin:build: ✓ Generating static pages using 11 workers (13/13) in 330ms
+admin:build:   Finalizing page optimization ...
+admin:build: 
+admin:build: Route (app)
+admin:build: ┌ ○ /
+admin:build: ├ ○ /_not-found
+admin:build: ├ ƒ /api/applications/approve
+admin:build: ├ ƒ /api/applications/reject
+admin:build: ├ ƒ /api/events/create
+admin:build: ├ ƒ /api/events/delete
+admin:build: ├ ƒ /api/events/update
+admin:build: ├ ○ /applications
+admin:build: ├ ○ /contacts
+admin:build: ├ ○ /events/create
+admin:build: ├ ○ /events/manage
+admin:build: └ ○ /gallery
+admin:build: 
+admin:build: 
+admin:build: ○  (Static)   prerendered as static content
+admin:build: ƒ  (Dynamic)  server-rendered on demand
+admin:build: 
+web:build:   Generating static pages using 11 workers (2/9) 
+web:build:   Generating static pages using 11 workers (4/9) 
+web:build:   Generating static pages using 11 workers (6/9) 
+web:build: ✓ Generating static pages using 11 workers (9/9) in 1002ms
+web:build:   Finalizing page optimization ...
+web:build: 
+web:build: Route (app)
+web:build: ┌ ○ /
+web:build: ├ ○ /_not-found
+web:build: ├ ƒ /api/applications/apply
+web:build: ├ ƒ /api/events
+web:build: ├ ○ /apply
+web:build: ├ ○ /contact
+web:build: ├ ○ /events
+web:build: ├ ƒ /events/[id]
+web:build: └ ○ /profile
+web:build: 
+web:build: 
+web:build: ○  (Static)   prerendered as static content
+web:build: ƒ  (Dynamic)  server-rendered on demand
+web:build: 
+
+ Tasks:    3 successful, 3 total
+Cached:    0 cached, 3 total
+  Time:    14.454s 
+

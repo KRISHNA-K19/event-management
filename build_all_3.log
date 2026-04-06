@@ -1,0 +1,94 @@
+
+> clubhub@ build C:\clubhub
+> turbo run build
+
+
+   • Packages in scope: @repo/eslint-config, @repo/lib, @repo/typescript-config, @repo/ui, admin, docs, web
+   • Running build in 7 packages
+   • Remote caching disabled
+
+admin:build: cache miss, executing 4775e8b9c41e5c22
+docs:build: cache miss, executing f4afacfd7233fe45
+web:build: cache miss, executing 8a2d6fbadd776e1e
+admin:build: 
+admin:build: > admin@0.1.0 build C:\clubhub\apps\admin
+admin:build: > next build
+admin:build: 
+docs:build: 
+docs:build: > docs@0.1.0 build C:\clubhub\apps\docs
+docs:build: > next build
+docs:build: 
+web:build: 
+web:build: > web@0.1.0 build C:\clubhub\apps\web
+web:build: > next build
+web:build: 
+docs:build: ▲ Next.js 16.2.0 (Turbopack)
+docs:build: 
+docs:build:   Creating an optimized production build ...
+admin:build: ▲ Next.js 16.2.2 (Turbopack)
+admin:build: - Environments: .env.local
+admin:build: 
+web:build: ▲ Next.js 16.2.0 (Turbopack)
+web:build: - Environments: .env.local
+web:build: 
+web:build:   Creating an optimized production build ...
+admin:build:   Creating an optimized production build ...
+docs:build: ✓ Compiled successfully in 3.1s
+docs:build:   Running TypeScript ...
+admin:build: ✓ Compiled successfully in 4.6s
+admin:build:   Running TypeScript ...
+web:build: ✓ Compiled successfully in 5.3s
+web:build:   Running TypeScript ...
+docs:build:   Finished TypeScript in 3.8s ...
+docs:build:   Collecting page data using 5 workers ...
+docs:build:   Generating static pages using 5 workers (0/4) ...
+docs:build:   Generating static pages using 5 workers (1/4) 
+docs:build:   Generating static pages using 5 workers (2/4) 
+docs:build:   Generating static pages using 5 workers (3/4) 
+docs:build: ✓ Generating static pages using 5 workers (4/4) in 990ms
+docs:build:   Finalizing page optimization ...
+docs:build: 
+docs:build: Route (app)
+docs:build: ┌ ○ /
+docs:build: └ ○ /_not-found
+docs:build: 
+docs:build: 
+docs:build: ○  (Static)  prerendered as static content
+docs:build: 
+admin:build: Failed to type check.
+admin:build: 
+admin:build: .next/types/validator.ts:116:39
+admin:build: Type error: File 'C:/clubhub/apps/admin/app/api/applications/reject/route.ts' is not a module.
+admin:build: 
+admin:build:   [90m114 |[0m {
+admin:build:   [90m115 |[0m   [36mtype[0m __IsExpected<[33mSpecific[0m [36mextends[0m [33mRouteHandlerConfig[0m<[32m"/api/applications/reject"[0m>> = [33mSp...[0m
+admin:build: [31m[1m>[0m [90m116 |[0m   [36mconst[0m handler = {} [36mas[0m [36mtypeof[0m [36mimport[0m([32m"../../app/api/applications/reject/route.js"[0m)
+admin:build:   [90m    |[0m                                       [31m[1m^[0m
+admin:build:   [90m117 |[0m   [36mtype[0m __Check = __IsExpected<[36mtypeof[0m handler>
+admin:build:   [90m118 |[0m   [90m// @ts-ignore[0m
+admin:build:   [90m119 |[0m   [36mtype[0m __Unused = __Check
+web:build: Failed to type check.
+web:build: 
+web:build: ../../packages/lib/supabase/server.ts:13:44
+web:build: Type error: Property 'get' does not exist on type 'Promise<ReadonlyRequestCookies>'.
+web:build: 
+web:build:   [90m11 |[0m     {
+web:build:   [90m12 |[0m       cookies: {
+web:build: [31m[1m>[0m [90m13 |[0m         get: (name: string) => cookieStore.get(name)?.value,
+web:build:   [90m   |[0m                                            [31m[1m^[0m
+web:build:   [90m14 |[0m         set: (name: string, value: string, options?: [33mCookieOptions[0m) =>
+web:build:   [90m15 |[0m           cookieStore.set(name, value, options),
+web:build:   [90m16 |[0m         remove: (name: string, options?: [33mCookieOptions[0m) =>
+web:build: Next.js build worker exited with code: 1 and signal: null
+admin:build: Next.js build worker exited with code: 1 and signal: null
+web:build:  ELIFECYCLE  Command failed with exit code 1.
+admin:build:  ELIFECYCLE  Command failed with exit code 1.
+ ERROR  web#build: command (C:\clubhub\apps\web) C:\Users\krish\AppData\Local\pnpm\.tools\pnpm\9.0.0\bin\pnpm.CMD run build exited (1)
+
+ Tasks:    0 successful, 3 total
+Cached:    0 cached, 3 total
+  Time:    11.569s 
+Failed:    web#build
+
+ ERROR  run failed: command  exited (1)
+ ELIFECYCLE  Command failed with exit code 1.
