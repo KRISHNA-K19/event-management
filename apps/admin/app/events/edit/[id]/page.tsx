@@ -27,7 +27,7 @@ export default function EditEventPage({ params }: PageProps) {
           date: event.date,
           location: event.location || '',
           description: event.description,
-          imageUrl: event.imageUrl || '',
+          imageUrl: event.image_url || '',
         });
       }
       setLoading(false);

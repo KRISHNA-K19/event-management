@@ -4,6 +4,8 @@ export type Event = {
   description: string;
   event_date: string;
   image_url?: string;
+  imageUrl?: string; // Compatibility bridge
+  date?: string;     // Compatibility bridge
   location?: string;
   created_at: string;
 };
