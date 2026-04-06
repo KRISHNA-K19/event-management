@@ -45,7 +45,7 @@ export default function EventCard({ event }: EventCardProps) {
       
       <div className="flex items-center gap-2 mb-6">
         <span className="text-xs font-bold text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
-          {new Date(event.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
+          {new Date(event.event_date).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
         </span>
       </div>
 

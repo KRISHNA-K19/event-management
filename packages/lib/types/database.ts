@@ -2,7 +2,9 @@ export type Event = {
   id: string;
   title: string;
   description: string;
-  date: string;
+  event_date: string;
+  image_url?: string;
+  location?: string;
   created_at: string;
 };
 

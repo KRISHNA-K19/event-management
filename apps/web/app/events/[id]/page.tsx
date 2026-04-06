@@ -100,7 +100,7 @@ export default function EventDetailPage({ params }: PageProps) {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
               <div className="space-y-3">
                 <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-4 py-1.5 rounded-full border border-cyan-500/20">
-                  {new Date(event.date).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}
+                  {new Date(event.event_date).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}
                 </span>
                 <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-lg leading-tight">
                   {event.title}
