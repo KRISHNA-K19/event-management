@@ -88,9 +88,9 @@ export default function EventDetailPage({ params }: PageProps) {
         <div className="max-w-4xl mx-auto">
           <div className="glass-container p-0 relative overflow-hidden animate-fadeIn border-none shadow-[0_32px_64px_-16px_rgba(0,0,0,0.6)]">
             {/* Visual Hero Section */}
-            {event.imageUrl && (
+            {event.image_url && (
               <div className="relative w-full h-[320px] overflow-hidden rounded-t-3xl">
-                <img src={event.imageUrl} alt={event.title} className="w-full h-full object-cover" />
+                <img src={event.image_url} alt={event.title} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
               </div>
             )}

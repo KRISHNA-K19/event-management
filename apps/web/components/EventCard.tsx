@@ -22,9 +22,9 @@ export default function EventCard({ event }: EventCardProps) {
   return (
     <div className="glass-container p-0 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden flex flex-col h-full">
       <div className="relative h-48 w-full overflow-hidden">
-        {event.imageUrl ? (
+        {event.image_url ? (
           <img 
-            src={event.imageUrl} 
+            src={event.image_url} 
             alt={event.title} 
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 blur-[1px] group-hover:blur-0"
           />
