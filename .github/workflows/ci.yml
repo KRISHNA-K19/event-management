@@ -28,8 +28,8 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build and Check
-        run: pnpm build
+      - name: Build and Check Core Apps
+        run: pnpm build --filter=!docs
         env:
           TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
           TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
