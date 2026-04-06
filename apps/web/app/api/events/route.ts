@@ -5,7 +5,7 @@ export async function GET() {
   const supabaseServer = await createServerSupabase();
   const { data, error } = await supabaseServer
     .from("events")
-    .select("*, date:event_date, imageUrl:image_url")
+    .select("*")
     .order("event_date", { ascending: true });
 
   if (error) {
