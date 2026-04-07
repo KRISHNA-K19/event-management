@@ -19,12 +19,15 @@ export default function EventCard({ event }: EventCardProps) {
     });
   }, []);
 
+  const imageUrl = event.image_url || event.imageUrl;
+  const displayDate = event.event_date || event.date;
+
   return (
     <div className="glass-container p-0 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden flex flex-col h-full">
       <div className="relative h-48 w-full overflow-hidden">
-        {event.image_url ? (
+        {imageUrl ? (
           <img 
-            src={event.image_url} 
+            src={imageUrl} 
             alt={event.title} 
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 blur-[1px] group-hover:blur-0"
           />
@@ -45,7 +48,7 @@ export default function EventCard({ event }: EventCardProps) {
       
       <div className="flex items-center gap-2 mb-6">
         <span className="text-xs font-bold text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
-          {new Date(event.event_date).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
+          {displayDate ? new Date(displayDate).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }) : 'TBA'}
         </span>
       </div>
 

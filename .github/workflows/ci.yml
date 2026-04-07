@@ -28,6 +28,9 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Clear turbo cache
+        run: rm -rf .turbo
+
       - name: Build and Check Core Apps
         run: pnpm build --filter=!docs
         env:
