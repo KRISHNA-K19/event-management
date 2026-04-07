@@ -35,7 +35,7 @@ jobs:
       - name: Clear turbo cache
         run: rm -rf .turbo
 
-      - name: Build and Check Core Apps
+      - name: Build
         run: pnpm build --filter=!docs
         env:
           TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
