@@ -204,6 +204,9 @@ importers:
         specifier: 16.2.0
         version: 16.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
     devDependencies:
+      '@eslint/js':
+        specifier: ^9.39.1
+        version: 9.39.1
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
@@ -231,6 +234,9 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
+      '@eslint/js':
+        specifier: ^9.39.1
+        version: 9.39.1
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config

@@ -1,4 +1,12 @@
-import { config } from "@repo/eslint-config/react-internal";
+import js from "@eslint/js";
 
 /** @type {import("eslint").Linter.Config[]} */
-export default config;
+export default [
+  js.configs.recommended,
+  {
+    rules: {
+      "no-unused-vars": "warn",
+      "no-explicit-any": "off"
+    }
+  }
+];

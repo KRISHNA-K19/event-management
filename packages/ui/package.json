@@ -6,11 +6,12 @@
     "./*": "./src/*.tsx"
   },
   "scripts": {
-    "lint": "echo 'lint disabled'",
+    "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^22.15.3",
