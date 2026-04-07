@@ -16,9 +16,10 @@ export const createServerSupabase = async () => {
         setAll(cookiesToSet) {
           try {
             cookiesToSet.forEach(({ name, value, options }) => {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               cookieStore.set(name, value, options as any)
             })
-          } catch (error) {
+          } catch {
             // The `setAll` method was called from a Server Component.
             // This can be ignored if you have middleware refreshing
             // user sessions.
