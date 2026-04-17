@@ -5,7 +5,7 @@ import { SITE_NAME } from '@repo/lib/utils/constants';
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen pb-20">
+    <main className="min-h-screen bg-slate-950 text-white selection:bg-cyan-500/30 pb-20">
       
       {/* Hero Section */}
       <section className="relative mt-12 flex flex-col items-center justify-center pt-20 pb-16 px-6">
