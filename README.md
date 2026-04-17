@@ -2,6 +2,11 @@
 
 ClubHub is a modern, premium Event and Club Management System built for visionaries, creators, and community leaders. The platform provides a beautiful glassmorphic UI alongside a robust backend capable of registering students, managing public events, handling seamless user authentication, and reviewing incoming application data directly from a custom dashboard.
 
+## 🌍 Live Deployments
+
+- **Web Portal (Public):** [Event Management Web](https://event-management-web.vercel.app/)  *(Dashboard: [Vercel Project](https://vercel.com/krishnamoorthy-ks-projects/event-management-web))*
+- **Admin Portal (Management):** [Event Management Admin](https://event-management-admin-tt79.vercel.app/) *(Dashboard: [Vercel Project](https://vercel.com/krishnamoorthy-ks-projects/event-management-admin-tt79))*
+
 ## 🚀 Tech Stack
 
 This project is engineered using modern, bleeding-edge web technologies, housed inside a high-performance monorepo:
@@ -68,8 +73,7 @@ Run the unified developer server via Turborepo:
 ```sh
 pnpm dev
 ```
-- `web` typically runs on [http://localhost:3000](http://localhost:3000)
-- `docs` typically runs on [http://localhost:3001](http://localhost:3001)
+- `web` typically runs on [http://localhost:3000]()
 - `admin` typically runs on [http://localhost:3002](http://localhost:3002)
 
 ### 4. Build and Code Quality
