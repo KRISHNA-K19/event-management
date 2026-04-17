@@ -1,159 +1,95 @@
-# Turborepo starter
+# ClubHub 🌟
 
-This Turborepo starter is maintained by the Turborepo core team.
+ClubHub is a modern, premium Event and Club Management System built for visionaries, creators, and community leaders. The platform provides a beautiful glassmorphic UI alongside a robust backend capable of registering students, managing public events, handling seamless user authentication, and reviewing incoming application data directly from a custom dashboard.
 
-## Using this example
+## 🚀 Tech Stack
 
-Run the following command:
+This project is engineered using modern, bleeding-edge web technologies, housed inside a high-performance monorepo:
 
+### Core Architecture
+- **Language**: [TypeScript](https://www.typescriptlang.org/) (Strictly typed monorepo)
+- **Monorepo Engine**: [Turborepo](https://turborepo.org/)
+- **Package Manager**: [pnpm](https://pnpm.io/) workspaces
+
+### Frontend & Application
+- **Framework**: [Next.js 16.2](https://nextjs.org/) (React 19, Turbopack)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) (Alpha next-gen PostCSS integration)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Design System**: Custom glassmorphic styles, neon-glow palettes, and highly animated responsive utilities.
+
+### Backend & Infrastructure
+- **BaaS (Backend as a Service)**: [Supabase](https://supabase.com/)
+- **Authentication**: `@supabase/ssr` with session synchronization across components.
+- **Database**: PostgreSQL (via Supabase) with strictly typed relational mapping.
+- **CI/CD**: GitHub Actions & Cloud Deployment (Vercel)
+
+---
+
+## 📂 Repository Structure
+
+The project code is modular, separated neatly into distinct independent applications and shared packages:
+
+### Applications (`apps/`)
+
+- `web`: The public-facing Next.js application. Where users explore events, sign up for membership, and edit their profiles.
+- `admin`: The administrative Next.js application. Used by club managers to overview and manage applications (approval/rejection) and event creation.
+- `docs`: A lightweight Next.js app used to securely store platform and developer documentation.
+
+### Packages (`packages/`)
+
+- `@repo/ui`: A shared, reusable React component library scaling standard UI tokens.
+- `@repo/lib`: A highly centralized utility library housing the database types and typed Supabase standard client functions (`createClientSupabase`).
+- `@repo/eslint-config`: Shared `eslint` configurations to strict-enforce clean, highly synchronized code across environments.
+- `@repo/typescript-config`: Shared `tsconfig.json` configurations used homogeneously.
+
+---
+
+## 🛠️ Usage & Development
+
+### 1. Prerequisites
+Make sure you have Node >20 and `pnpm` installed.
+
+### 2. Setup
+
+Clone the repository and install all localized monorepo dependencies:
 ```sh
-npx create-turbo@latest
+npm install -g pnpm
+pnpm install
 ```
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
+Set up your `.env.local` files based on the `.env.example` configurations available across the `/apps` and `/packages` structures.
 ```sh
-cd my-turborepo
-turbo build
+NEXT_PUBLIC_SUPABASE_URL="your-supabase-url"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="your-supabase-anon-key"
 ```
 
-Without global `turbo`, use your package manager:
+### 3. Development Server
+Run the unified developer server via Turborepo:
+```sh
+pnpm dev
+```
+- `web` typically runs on [http://localhost:3000](http://localhost:3000)
+- `docs` typically runs on [http://localhost:3001](http://localhost:3001)
+- `admin` typically runs on [http://localhost:3002](http://localhost:3002)
+
+### 4. Build and Code Quality
+Ensure the project remains warning-free and production-ready before PRs:
 
 ```sh
-cd my-turborepo
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
+pnpm check-types  # Verifies strict typing across all packages
+pnpm lint         # Runs linting across the monorepo
+pnpm build        # Compiles an optimized production build via Turbopack
 ```
 
-You can build a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+---
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
+## ✨ Features
 
-```sh
-turbo build --filter=docs
-```
+* **Real-time Approvals**: Real-time admin views to accept, reject, or mark registrations as pending. 
+* **State of the Art Design**: Seamless backdrop-blurs, responsive layouts, hover scale events, and dynamic glass layouts.
+* **Shared Authentication**: Login seamlessly cascades from the `lib/supabase` ecosystem to both `web` and `admin` boundaries. 
 
-Without global `turbo`:
-
-```sh
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo dev
-```
-
-Without global `turbo`, use your package manager:
-
-```sh
-cd my-turborepo
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
-```
-
-You can develop a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo dev --filter=web
-```
-
-Without global `turbo`:
-
-```sh
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo login
-```
-
-Without global `turbo`, use your package manager:
-
-```sh
-cd my-turborepo
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo link
-```
-
-Without global `turbo`:
-
-```sh
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.dev/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.dev/docs/reference/configuration)
-- [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
+## 🤝 Contribution Best Practices
+* Commits should follow standard conventional formats.
+* Make sure `pnpm check-types`, and `pnpm lint` resolve effectively before merging.
+* UI adjustments should be placed in `packages/ui` only if they represent universally shared components or hooks.
