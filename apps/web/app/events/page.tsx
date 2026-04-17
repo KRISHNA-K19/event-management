@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { Event } from '@repo/lib/types/database';
 import EventCard from '../../components/EventCard';
-import Navbar from '../../components/Navbar';
 
 export default function EventsPage() {
   const [events, setEvents] = useState<Event[]>([]);
@@ -28,7 +27,6 @@ export default function EventsPage() {
 
   return (
     <div>
-      <Navbar />
       <div className="container mx-auto p-6">
         <h1 className="text-3xl font-bold mb-8">Events</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

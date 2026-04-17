@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from '../../components/Navbar';
 import { Button } from '../../components/Button';
 import { useState } from 'react';
 import { createClientSupabase } from '@repo/lib/supabase/client';
@@ -36,7 +35,6 @@ export default function LoginPage() {
 
   return (
     <main className="min-h-screen pb-20">
-      <Navbar />
       <div className="container mx-auto px-6 pt-32 max-w-lg">
         <div className="glass-container relative overflow-hidden animate-float">
           <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 rounded-full bg-cyan-500/20 blur-[60px]"></div>

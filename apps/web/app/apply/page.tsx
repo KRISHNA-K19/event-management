@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from '../../components/Navbar';
 import { Button } from '../../components/Button';
 import { useState } from 'react';
 
@@ -16,7 +15,6 @@ export default function ApplyPage() {
 
   return (
     <main className="min-h-screen pb-20">
-      <Navbar />
       <div className="container mx-auto px-6 pt-24 max-w-3xl">
         <div className="glass-container relative overflow-hidden animate-float">
           {/* Decorative background glow */}

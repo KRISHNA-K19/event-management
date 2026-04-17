@@ -3,10 +3,18 @@
 import { useEffect, useState } from 'react';
 import { createClientSupabase } from '@repo/lib/supabase/client';
 import { Button } from '../../components/Button';
-import { Mail, Trash2, Archive, MessageSquare } from 'lucide-react';
+import { Mail, Trash2, MessageSquare } from 'lucide-react';
+
+type ContactMessage = {
+  id: string;
+  name: string;
+  email: string;
+  message: string;
+  created_at: string;
+};
 
 export default function ContactsPage() {
-  const [messages, setMessages] = useState<any[]>([]);
+  const [messages, setMessages] = useState<ContactMessage[]>([]);
   const [loading, setLoading] = useState(true);
 
   const fetchMessages = async () => {

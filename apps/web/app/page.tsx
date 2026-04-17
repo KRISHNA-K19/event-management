@@ -1,13 +1,11 @@
 "use client";
 
-import Navbar from '../components/Navbar';
 import { Button } from '../components/Button';
 import { SITE_NAME } from '@repo/lib/utils/constants';
 
 export default function HomePage() {
   return (
-    <main className="pt-20">
-      <Navbar />
+    <main className="">
       <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-[rgba(30,58,138,0.3)] to-slate-900">
         <div className="[background:rgba(255,255,255,0.1)] backdrop-blur-xl p-12 rounded-3xl neon-glow max-w-4xl mx-8 animate-glowPulse">
           <h1 className="text-6xl md:text-7xl font-black mb-8 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent drop-shadow-2xl">

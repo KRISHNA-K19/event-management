@@ -55,3 +55,5 @@ export const nextJsConfig = [
     },
   },
 ];
+
+export const config = nextJsConfig;

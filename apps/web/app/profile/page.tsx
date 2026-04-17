@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from '../../components/Navbar';
 import { Button } from '../../components/Button';
 import { useEffect, useState } from 'react';
 import { createClientSupabase } from '@repo/lib/supabase/client';
@@ -42,7 +41,6 @@ export default function ProfilePage() {
 
   return (
     <main className="min-h-screen bg-slate-950 text-white selection:bg-cyan-500/30 pb-20">
-      <Navbar />
       
       <div className="container mx-auto px-6 pt-32 max-w-4xl relative overflow-hidden">
         {/* Decorative Background Elements */}

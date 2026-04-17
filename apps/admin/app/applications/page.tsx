@@ -4,11 +4,17 @@ import { useEffect, useState } from 'react';
 import DataTable from '../../components/DataTable';
 import { Button } from '../../components/Button';
 import { createClientSupabase } from '@repo/lib/supabase/client';
+import { Application } from '@repo/lib/types/database';
+
+type ApplicationWithRelations = Application & {
+  event?: { title: string };
+  profile?: { full_name: string; email: string };
+};
 
 export default function ApplicationsPage() {
-  const [applications, setApplications] = useState<any[]>([]);
+  const [applications, setApplications] = useState<ApplicationWithRelations[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedApp, setSelectedApp] = useState<any>(null);
+  const [selectedApp, setSelectedApp] = useState<ApplicationWithRelations | null>(null);
 
   const fetchApps = async () => {
     const res = await fetch('/api/applications');
@@ -23,7 +29,7 @@ export default function ApplicationsPage() {
     fetchApps();
   }, []);
 
-  const handleAction = async (id: string, newStatus: string) => {
+  const handleAction = async (id: string, newStatus: "approved" | "pending" | "rejected") => {
     const supabase = createClientSupabase();
     const { error } = await supabase.from('applications').update({ status: newStatus }).eq('id', id);
     if (!error) {

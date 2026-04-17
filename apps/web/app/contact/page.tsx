@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from '../../components/Navbar';
 import { Button } from '../../components/Button';
 import { useState } from 'react';
 import { createClientSupabase } from '@repo/lib/supabase/client';
@@ -35,7 +34,6 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-slate-950 text-white selection:bg-cyan-500/30 pb-20">
-      <Navbar />
       <div className="container mx-auto px-6 pt-24 max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
         {/* Left Side: Contact Info */}

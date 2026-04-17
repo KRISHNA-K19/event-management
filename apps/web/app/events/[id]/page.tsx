@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState, use } from 'react';
-import Navbar from '../../../components/Navbar';
 import { createClientSupabase } from '@repo/lib/supabase/client';
 import { Button } from '../../../components/Button';
 import { useRouter } from 'next/navigation';
@@ -78,7 +77,6 @@ export default function EventDetailPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen bg-slate-950 text-white selection:bg-cyan-500/30 pb-20">
-      <Navbar />
       
       <div className="relative pt-32 pb-20 px-6 container mx-auto overflow-hidden">
         {/* Advanced Ambient Glows */}
