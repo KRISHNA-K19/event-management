@@ -29,7 +29,7 @@ export default function Navbar() {
           {SITE_NAME}
         </Link>
         <div className="flex space-x-2">
-          <Link href="/about"><Button size="sm" variant="ghost">About</Button></Link>
+          <Link href="/about"><Button size="sm">About</Button></Link>
           <Link href="/events"><Button size="sm">Events</Button></Link>
           <Link href="/contact"><Button size="sm">Contact</Button></Link>
           {user ? (
