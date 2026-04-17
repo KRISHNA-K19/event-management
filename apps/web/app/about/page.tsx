@@ -5,10 +5,12 @@ import { SITE_NAME } from '@repo/lib/utils/constants';
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white selection:bg-cyan-500/30 pb-20">
+    <main className="min-h-screen bg-slate-950 text-white selection:bg-cyan-500/30 pb-20 relative overflow-hidden">
+      {/* Top Background Glow for Navbar */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-cyan-600/15 rounded-full blur-[120px] pointer-events-none -z-10"></div>
       
       {/* Hero Section */}
-      <section className="relative mt-12 flex flex-col items-center justify-center pt-20 pb-16 px-6">
+      <section className="relative flex flex-col items-center justify-center pt-32 pb-16 px-6">
         <div className="absolute inset-0 max-w-4xl mx-auto rounded-full blur-[100px] bg-blue-600/20 -z-10 animate-glowPulse"></div>
         <div className="text-center max-w-3xl glass-container animate-float">
           <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-lg">
